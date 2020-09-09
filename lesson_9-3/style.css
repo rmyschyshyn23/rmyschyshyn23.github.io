@@ -1,0 +1,68 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #182F3F;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:200px;
+    left:150px;
+    width: 800px;
+    height: 600px;
+}
+
+.earth{
+    z-index: 1  ;
+    width: 300px;
+}
+
+.moon{
+    z-index: 2;
+    width: 80px;
+    position: absolute;
+    top:200px;
+    right:150px;
+    animation:poleteli 2s 10;
+    animation-play-state: running;
+    animation-timing-function: linear;
+
+}
+@keyframes poleteli{
+    0%{ 
+        z-index: 0;
+        top:200px;
+        right:150px;
+    }
+    25%{
+        z-index:0;
+        transform: rotate(0deg) translateY(0) translateX(-400px);
+    }
+    37.5%{
+        z-index: 2;
+        transform:rotate(0deg) translateY(80px) translateX(-450px) ;
+
+    }
+    50%{
+        z-index: 2;
+        transform: rotate(0deg) translateY(150px) translateX(-400px);
+    }
+    75%{
+        z-index: 2;
+        transform: rotate(0deg) translateY(150px) translateX(-40px);
+    }
+    87.5%{
+        transform:rotate(0deg) translateY(80px) translateX(90px);
+    }
+    100%{
+        z-index: 2;
+        transform: rotate(  0deg) translateY(0) translateX(0px);
+    }
+}
